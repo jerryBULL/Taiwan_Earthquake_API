@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>地震即時查詢</title>
+        <link rel="icon" href="earthquake.ico" type="image/x-icon">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    </head>
+    <body>
+        <div class="flex">
+            <div class="earthquakebox">
+                <div class="obvious_introduction">
+                    <h1>顯著地震</h1>
+                    <div id="obvious_introduction"></div>
+                    <hr>
+                    <ul id="obvious_content"></ul>
+                </div>
+                <div class="obvious_img"></div>
+            </div>
+            <div class="earthquakebox">
+                <div class="not_obvious_introduction">
+                    <h1>小區域地震</h1>
+                    <div id="not_obvious_introduction"></div>
+                    <hr>
+                    <ul id="not_obvious_content"></ul>
+                </div>
+                <div class="not_obvious_img"></div>
+            </div>
+        </div>
+    </body>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+</html>
