@@ -7,26 +7,30 @@
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>
-        <div class="flex">
-            <div class="earthquakebox">
-                <div class="obvious_introduction">
-                    <h1>顯著地震</h1>
-                    <div id="obvious_introduction"></div>
-                    <hr>
-                    <ul id="obvious_content"></ul>
-                </div>
-                <div class="obvious_img"></div>
+        <nav>
+            <h1>地震即時查詢</h1>
+        </nav>
+        <div class="content">
+            <div class="obvious">
+                <h3 id="obvious_title">顯著地震</h3>
+                <div id="obvious_introduction" style="margin: 0 5px;"></div>
+                <hr>
+                <ul id="obvious_content" style="margin: 0 5px;"></ul>
+                <hr>
+                <img id="obvious_img">
             </div>
-            <div class="earthquakebox">
-                <div class="not_obvious_introduction">
-                    <h1>小區域地震</h1>
-                    <div id="not_obvious_introduction"></div>
-                    <hr>
-                    <ul id="not_obvious_content"></ul>
-                </div>
-                <div class="not_obvious_img"></div>
+            <div class="not_obvious">
+                <h3 id="not_obvious_title">小區域地震</h3>
+                <div id="not_obvious_introduction" style="margin: 0 5px;"></div>
+                <hr>
+                <ul id="not_obvious_content" style="margin: 0 5px;"></ul>
+                <hr>
+                <img id="not_obvious_img">
             </div>
         </div>
+        <footer>
+            <h6>版權所有 © 簡子樫 保留所有權利。</h6>
+        </footer>
     </body>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/main.js"></script>

@@ -11,10 +11,17 @@ $(document).ready(function () {
     $.ajax({
         type: "GET",
         url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/E-A0015-001?Authorization=rdec-key-123-45678-011121314",
-        success: function (response) {
+        success: function (response) { 
             let object=response.records.earthquake[0];
-            $('#obvious_introduction').append("<h3>"+object.reportContent+"</h3>");
-            $('.obvious_img').append("<img src="+object.reportImageURI+">");
+            if(object.reportColor=="黃色"){
+                $("#obvious_title").css({"background":"#fed23a"});
+            }else if(object.reportColor=="橘色"){
+                $("#obvious_title").css({"background":"#f39800"});
+            }else if(object.reportColor=="紅色"){
+                $("#obvious_title").css({"background":"red"});
+            }
+            $('#obvious_introduction').append("<h5>"+object.reportContent+"</h5>");
+            $('#obvious_img').attr("src",object.reportImageURI);
             $('#obvious_content').append("<li>編號："+object.earthquakeNo+"</li>")
             .append("<li>位置："+object.earthquakeInfo.epiCenter.location+"</li>")
             .append("<li>時間："+object.earthquakeInfo.originTime+"</li>")
@@ -28,8 +35,15 @@ $(document).ready(function () {
         url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/E-A0016-001?Authorization=rdec-key-123-45678-011121314",
         success: function (response) {
             let object=response.records.earthquake[0];
-            $('#not_obvious_introduction').append("<h3>"+object.reportContent+"</h3>");
-            $('.not_obvious_img').append("<img src="+object.reportImageURI+">");
+            if(object.reportColor=="黃色"){
+                $("#not_obvious_title").css({"background":"#fed23a"});
+            }else if(object.reportColor=="橘色"){
+                $("#not_obvious_title").css({"background":"#f39800"});
+            }else if(object.reportColor=="紅色"){
+                $("#not_obvious_title").css({"background":"red"});
+            }
+            $('#not_obvious_introduction').append("<h5>"+object.reportContent+"</h5>");
+            $('#not_obvious_img').attr("src",object.reportImageURI);
             $('#not_obvious_content').append("<li>編號："+object.earthquakeNo+"</li>")
             .append("<li>位置："+object.earthquakeInfo.epiCenter.location+"</li>")
             .append("<li>時間："+object.earthquakeInfo.originTime+"</li>")
