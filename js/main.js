@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    //顯著地震
+    //地震API
     //編號：object.earthquakeNo
     //時間：object.earthquakeInfo.originTime
     //規模：object.earthquakeInfo.magnitude.magnitudeValue
